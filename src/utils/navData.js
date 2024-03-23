@@ -14,7 +14,7 @@ export const navData = [
     
     {
       name: "User",
-      link: "/user",
+      link: "/admins",
       subCategories: [],
     },
   
