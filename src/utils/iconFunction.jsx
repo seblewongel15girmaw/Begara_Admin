@@ -25,18 +25,16 @@ export const getIcon = (iconName) => {
       return <FaFileAlt />;
     case "Coffee":
       return <FaCoffee />;
-    case "Machinery":
-      return <FaIndustry />;
+
     case "Setting":
       return <FaCogs />;
     case "ManageBrokers":
       return <FaUserFriends />;
       case "User":
         return <FaUserFriends />;
-    case "Assets":
+    case "Admins":
       return <FaIndustry />;
-    case "Role & permisions":
-      return <FaLock />;
+  
     default:
       return null;
   }
