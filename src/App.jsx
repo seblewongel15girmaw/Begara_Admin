@@ -7,9 +7,11 @@ import Layout from "./layout.";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/home";
-import Broker from "./pages/brokers/index";
 import CreateBroker from "./pages/brokers/create";
 import AdminIndex from "./pages/Admins/index";
+import UserIndex from "./pages/users";
+import BrokerIndex from "./pages/brokers";
+import UserCreate from "./pages/users/create";
 
 
 
@@ -23,9 +25,12 @@ function App() {
         <Routes> 
           <Route  element={<Layout />} >
           <Route path="/" element={<Home />} />
-          <Route path="/manage-brokers" element={<Broker />} />
+          <Route path="/manage-brokers" element={<BrokerIndex />} />
           <Route path="/add-broker" element={<CreateBroker />} />
           <Route path="/admins" element={<AdminIndex />} />
+          <Route path="/manage-users" element={<UserIndex />} />
+          <Route path="/manage-users" element={<UserIndex />} />
+          <Route path="/add-user" element={<UserCreate />} />
           </Route>
           
           {/* <Route path="/unauthorized" element={<Unauthorized />} /> */}
