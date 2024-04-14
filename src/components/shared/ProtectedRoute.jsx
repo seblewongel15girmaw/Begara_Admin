@@ -9,9 +9,7 @@ export const ProtectedRoute = () => {
 
   useEffect(() => {
     const checkExpiration = async () => {
-      // Assuming checkTokenExpiration is a function that checks if the token is expired
-      // const tokenIsValid = await checkTokenExpiration(); // Replace with your token expiration check logic
-      // setIsTokenValid(tokenIsValid);
+  
     };
 
     checkExpiration();

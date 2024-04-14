@@ -14,6 +14,12 @@ import UserIndex from "./pages/users";
 import BrokerIndex from "./pages/brokers";
 import UserCreate from "./pages/users/create";
 
+import Login from "./pages/auth/login";
+import Unauthorized from "./pages/unauthorized";
+import { ProtectedRoute } from "./components/shared/ProtectedRoute";
+
+
+
 
 
 const queryClient = new QueryClient();
@@ -23,7 +29,12 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <>
         <ToastContainer />
+
         <Routes> 
+        <Route path="/login" element={<Login />} />
+        <Route path="/unauthorized" element={<Unauthorized />} />
+
+        <Route element={<ProtectedRoute />}>
           <Route  element={<Layout />} >
           <Route path="/" element={<Home />} />
           <Route path="/manage-brokers" element={<BrokerIndex />} />
@@ -34,9 +45,7 @@ function App() {
           <Route path="/manage-users" element={<UserIndex />} />
           <Route path="/add-user" element={<UserCreate />} />
           </Route>
-          
-          {/* <Route path="/unauthorized" element={<Unauthorized />} /> */}
-          {/* protected route  */}
+        </Route>
           
         </Routes>
       </>
