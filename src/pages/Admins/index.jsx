@@ -35,10 +35,10 @@ export default function AdminIndex() {
   return (
     <div>
       <Link
-        to="/add-admin" className="mt-4  bg-blue-500 text-white rounded hover:bg-blue-600">
+        to="/add-admin"  className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
         Add New Admin
       </Link>
-      <h1 className="text-2xl font-bold mb-4">System Admins List</h1>
+      <h1 className="text-2xl font-bold mb-4 mt-3">System Admins List</h1>
       <table className="table table-bordered">
         <thead>
           <tr className="bg-gray-200">

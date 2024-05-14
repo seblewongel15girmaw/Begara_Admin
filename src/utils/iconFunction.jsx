@@ -1,30 +1,19 @@
 import {
   FaHome,
-  FaShoppingCart,
-  FaBox,
-  FaGift,
-  FaFileAlt,
+ 
   FaCogs,
   FaCoffee,
   FaIndustry,
   FaUserFriends,
-  FaLock
+  FaComment
 } from "react-icons/fa";
 export const getIcon = (iconName) => {
   switch (iconName) {
     case "Dashboard":
       return <FaHome />;
-   
-    case "Order":
-      return <FaShoppingCart />;
-    case "Package":
-      return <FaBox />;
-    case "Gift Bag":
-      return <FaGift />;
-    case "Sticker":
-      return <FaFileAlt />;
-    case "Coffee":
-      return <FaCoffee />;
+
+    case "Feedbacks":
+      return <FaComment />;
 
     case "Setting":
       return <FaCogs />;

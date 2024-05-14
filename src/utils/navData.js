@@ -22,6 +22,11 @@ export const navData = [
       link: "/admins",
       subCategories: [],
     },
+    {
+      name: "Feedbacks",
+      link: "/feedbacks",
+      subCategories: [],
+    },
   
    
     

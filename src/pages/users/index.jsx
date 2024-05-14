@@ -25,21 +25,21 @@ export default function UserIndex() {
       >
         Add User
       </Link>
-      <h1 className="text-2xl font-bold mb-4">Users List</h1>
+      <h1 className="text-2xl font-bold mb-4 mt-3">Users List</h1>
       <table className="min-w-full border rounded">
         <thead>
           <tr className="bg-gray-200">
-            <th className="px-4 py-2 whitespace-nowrap">ID</th>
-            <th className="px-4 py-2 whitespace-nowrap">Name</th>
-            <th className="px-4 py-2 whitespace-nowrap">Address</th>
+            <th className="px-4 py-2 whitespace-nowrap text-center">ID</th>
+            <th className="px-4 py-2 whitespace-nowrap text-center">Name</th>
+            <th className="px-4 py-2 whitespace-nowrap text-center">Address</th>
           </tr>
         </thead>
         <tbody>
           {users.map((user) => (
             <tr key={user.id}>
-              <td className="px-4 py-2 whitespace-nowrap">{user.id}</td>
-              <td className="px-4 py-2 whitespace-nowrap">{user.full_name}</td>
-              <td className="px-4 py-2 whitespace-nowrap">{user.address}</td>
+              <td className="px-4 py-2 whitespace-nowrap text-center">{user.id}</td>
+              <td className="px-4 py-2 whitespace-nowrap text-center">{user.full_name}</td>
+              <td className="px-4 py-2 whitespace-nowrap text-center">{user.address}</td>
             </tr>
           ))}
         </tbody>
