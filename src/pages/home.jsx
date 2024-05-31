@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 function Home() {
-  const [totalUsers, setTotalUsers] = useState(0);
+  const [totalActiveUsers, setTotalActiveUsers] = useState(0);
+  const [totalInactiveUsers, setTotalInactiveUsers] = useState(0);
   const [totalBrokers, setTotalBrokers] = useState(0);
-  const [totalAdmins, setTotalAdmins] = useState(0);
+  const [totalUsers, setTotalUsers] = useState(0);
 
   useEffect(() => {
     // Fetch the dashboard data from the server
@@ -17,9 +18,10 @@ function Home() {
       const data = await response.json();
 
       // Update the state variables with the retrieved data
-      setTotalUsers(data.totalUsers);
+      setTotalActiveUsers(data.totalActiveUsers);
+      setTotalInactiveUsers(data.totalInactiveUsers);
       setTotalBrokers(data.totalBrokers);
-      setTotalAdmins(data.totalAdmins);
+      setTotalUsers(data.totalUsers);
     } catch (error) {
       console.error(error);
     }
@@ -68,8 +70,15 @@ function Home() {
       <div className="dashboard-container">
         <div className="dashboard-box">
           <div className="box-content">
-            <h2>Total Users</h2>
-            <p id="totalUsers">{totalUsers}</p>
+            <h2>Total Active Users</h2>
+            <p id="totalUsers">{totalActiveUsers}</p>
+          </div>
+        </div>
+
+        <div className="dashboard-box">
+          <div className="box-content">
+            <h2>Total Inactive Users</h2>
+            <p id="totalUsers">{totalInactiveUsers}</p>
           </div>
         </div>
 
@@ -82,8 +91,8 @@ function Home() {
 
         <div className="dashboard-box">
           <div className="box-content">
-            <h2>Total Admins</h2>
-            <p id="totalAdmins">{totalAdmins}</p>
+            <h2>Total Users</h2>
+            <p id="totalAdmins">{totalUsers}</p>
           </div>
         </div>
       </div>

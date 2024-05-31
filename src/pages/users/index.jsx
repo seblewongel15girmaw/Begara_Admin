@@ -29,17 +29,28 @@ export default function UserIndex() {
       <table className="min-w-full border rounded">
         <thead>
           <tr className="bg-gray-200">
-            <th className="px-4 py-2 whitespace-nowrap text-center">ID</th>
-            <th className="px-4 py-2 whitespace-nowrap text-center">Name</th>
+            {/* <th className="px-4 py-2 whitespace-nowrap text-center">ID</th> */}
+            <th className="px-4 py-2 whitespace-nowrap text-center">Full name</th>
             <th className="px-4 py-2 whitespace-nowrap text-center">Address</th>
+            <th className="px-4 py-2 whitespace-nowrap text-center">Email</th>
+            <th className="px-4 py-2 whitespace-nowrap text-center">Gender</th>
+            <th className="px-4 py-2 whitespace-nowrap text-center">User Status</th>
+
           </tr>
         </thead>
         <tbody>
           {users.map((user) => (
             <tr key={user.id}>
-              <td className="px-4 py-2 whitespace-nowrap text-center">{user.id}</td>
+              {/* <td className="px-4 py-2 whitespace-nowrap text-center">{user.id}</td> */}
               <td className="px-4 py-2 whitespace-nowrap text-center">{user.full_name}</td>
               <td className="px-4 py-2 whitespace-nowrap text-center">{user.address}</td>
+              <td className="px-4 py-2 whitespace-nowrap text-center">{user.email}</td>
+              <td className="px-4 py-2 whitespace-nowrap text-center">{user.gender}</td>
+              {/* <td className="px-4 py-2 whitespace-nowrap text-center">if({user.activate_status} == 1) "active" ?? "diactive"</td>
+               */}
+               <td className="px-4 py-2 whitespace-nowrap text-center">
+  {user.activate_status === 1 ? 'active' : 'inactive'}
+</td>
             </tr>
           ))}
         </tbody>
