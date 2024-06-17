@@ -33,9 +33,9 @@ export default function BrokerIndex() {
     <div>
       <Link
         to="/add-broker"  className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-        Add Broker
+        Add House Supplier
       </Link>
-      <h1 className="text-2xl font-bold mb-4 mt-3">Brokers List</h1>
+      <h1 className="text-2xl font-bold mb-4 mt-3">House Supplier List</h1>
       <table className="table table-bordered">
         <thead>
           <tr className="bg-gray-200">

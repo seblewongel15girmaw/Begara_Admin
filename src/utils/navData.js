@@ -7,7 +7,7 @@ export const navData = [
     },
   
     {
-      name: "ManageBrokers",
+      name: "ManageHouseSupplier",
       link: "/manage-brokers",
       subCategories: [],
     },

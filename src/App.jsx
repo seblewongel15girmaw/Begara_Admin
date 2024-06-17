@@ -34,19 +34,21 @@ function App() {
         <Routes> 
         <Route path="/login" element={<Login />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
+     
 
         <Route element={<ProtectedRoute />}>
-          <Route  element={<Layout />} >
-          <Route path="/" element={<Home />} />
+        <Route  element={<Layout />} >
+        <Route path="/" element={<Home />} />
           <Route path="/manage-brokers" element={<BrokerIndex />} />
           <Route path="/add-broker" element={<CreateBroker />} />
           <Route path="/admins" element={<AdminIndex />} />
           <Route path="/feedbacks" element={<Feedback />} />
           <Route path="/add-admin" element={< CreateAdmin/>} />
           <Route path="/manage-users" element={<UserIndex />} />
-          <Route path="/manage-users" element={<UserIndex />} />
           <Route path="/add-user" element={<UserCreate />} />
           </Route>
+         
+         
         </Route>
           
         </Routes>
